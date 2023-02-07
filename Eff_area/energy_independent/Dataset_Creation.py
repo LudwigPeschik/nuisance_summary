@@ -3,9 +3,12 @@ from gammapy.modeling.models import (
     Models, 
     FoVBackgroundModel,
     PowerLawSpectralModel,
+    ExpCutoffPowerLawSpectralModel,
     SkyModel,
     PowerLawNuisanceSpectralModel,
-    PowerLawNormNuisanceSpectralModel)
+    PowerLawNormNuisanceSpectralModel,
+    ExpCutoffPowerLawNuisanceSpectralModel,
+    GaussianSpatialModel)
 #from MapDatasetNuisanceE import MapDatasetNuisanceE
 from gammapy.modeling import Parameter, Parameters
 from gammapy.datasets import MapDataset
@@ -13,7 +16,7 @@ from gammapy.datasets import MapDataset
 path_crab = '/home/hpc/caph/mppi045h/3D_analysis/N_parameters_in_L/nuisance_summary/Crab'
 
 
-
+#ExpCutoffPowerLaw instead of Powerlaw
 
 class sys_dataset():
     def __init__(self, 
@@ -25,11 +28,16 @@ class sys_dataset():
         self.rnd = rnd
         
     def set_model(self):
-        models = Models.read(f"{path_crab}/standard_model.yml").copy()
-        model_spectrum  = PowerLawSpectralModel(
+        model_spatial = GaussianSpatialModel(
+            lon_0="83.631 deg",
+            lat_0="22.018 deg",
+            sigma="0.02 deg",
+        )
+        model_spectrum  = ExpCutoffPowerLawSpectralModel(
             index=2.3,
-            amplitude="1e-12 TeV-1 cm-2 s-1",    )
-        source_model = SkyModel(spatial_model = models['main source'].spatial_model ,
+            amplitude="1e-12 TeV-1 cm-2 s-1", 
+            lambda_=  "0.1 TeV-1"  )
+        source_model = SkyModel(spatial_model = model_spatial,
                                spectral_model = model_spectrum,
                                name = "Source")    
         source_model.parameters['lon_0'].frozen = True
@@ -60,15 +68,19 @@ class sys_dataset():
     
     
     def set_model_N(self):
-        models = Models.read(f"{path_crab}/standard_model.yml").copy()
-        model_spectrum  = PowerLawNuisanceSpectralModel(
+        model_spatial = GaussianSpatialModel(
+            lon_0="83.631 deg",
+            lat_0="22.018 deg",
+            sigma="0.02 deg",
+        )
+        model_spectrum  = ExpCutoffPowerLawNuisanceSpectralModel(
             index=2.3,
             amplitude="1e-12 TeV-1 cm-2 s-1",  
-            amplitudeN = 0)
-        print(len(model_spectrum.parameters))
-        print(len(model_spectrum.default_parameters))
+            amplitude_nuisance = 0)
+        #print(len(model_spectrum.parameters))
+        #print(len(model_spectrum.default_parameters))
 
-        source_model = SkyModel(spatial_model = models['main source'].spatial_model ,
+        source_model = SkyModel(spatial_model = model_spatial,
                                spectral_model = model_spectrum,
                                name = "SourceN")  
         source_model.parameters['lon_0'].frozen = True

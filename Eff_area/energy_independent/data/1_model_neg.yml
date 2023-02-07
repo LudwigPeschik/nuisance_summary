@@ -2,39 +2,47 @@ components:
 -   name: Source
     type: SkyModel
     spectral:
-        type: PowerLawSpectralModel
+        type: ExpCutoffPowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.300892826659273
-            error: 0.06276089924874005
+            value: 2.2932656623447274
+            error: 0.1607779596098793
             is_penalised: false
         -   name: amplitude
-            value: 9.101945407831386e-13
+            value: 9.119417320485696e-13
             unit: cm-2 s-1 TeV-1
-            error: 8.359415343349378e-14
+            error: 1.1352141078482069e-13
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
+            is_penalised: false
+        -   name: lambda_
+            value: 0.10278124093494943
+            unit: TeV-1
+            error: 0.05002339037118561
+            is_penalised: false
+        -   name: alpha
+            value: 1.0
             is_penalised: false
     spatial:
         type: GaussianSpatialModel
         frame: icrs
         parameters:
         -   name: lon_0
-            value: 83.6306047271155
+            value: 83.631
             unit: deg
             frozen: true
             is_penalised: false
         -   name: lat_0
-            value: 22.01814057644107
+            value: 22.018
             unit: deg
             frozen: true
             is_penalised: false
         -   name: sigma
-            value: 0.020167640957510693
+            value: 0.021008725502712426
             unit: deg
-            error: 0.010497940196081273
+            error: 0.02168933645829756
             is_penalised: false
         -   name: e
             value: 0.0
@@ -45,17 +53,17 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - JA0czIwF
+    - fgIn-_Uv
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
-            value: 0.9999642207408188
-            error: 0.002052892997662632
+            value: 1.000017142130433
+            error: 0.00205601337870186
             is_penalised: false
         -   name: tilt
-            value: -2.1942137919206167e-05
-            error: 0.0017288469616991028
+            value: 1.487811904446984e-05
+            error: 0.0019520853730433199
             frozen: false
             is_penalised: false
         -   name: reference
