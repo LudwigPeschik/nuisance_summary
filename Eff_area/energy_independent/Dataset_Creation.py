@@ -8,7 +8,6 @@ from gammapy.modeling.models import (
     PowerLawNuisanceSpectralModel,
     PowerLawNormNuisanceSpectralModel,
     ExpCutoffPowerLawNuisanceSpectralModel,
-    ExpCutoffPowerLawNuisanceASpectralModel,
     GaussianSpatialModel)
 #from MapDatasetNuisanceE import MapDatasetNuisanceE
 from gammapy.modeling import Parameter, Parameters
