@@ -8,6 +8,7 @@ from gammapy.modeling.models import (
     PowerLawNuisanceSpectralModel,
     PowerLawNormNuisanceSpectralModel,
     ExpCutoffPowerLawNuisanceSpectralModel,
+    ExpCutoffPowerLawNuisanceASpectralModel,
     GaussianSpatialModel)
 #from MapDatasetNuisanceE import MapDatasetNuisanceE
 from gammapy.modeling import Parameter, Parameters
@@ -75,11 +76,12 @@ class sys_dataset():
         )
         model_spectrum  = ExpCutoffPowerLawNuisanceSpectralModel(
             index=2.3,
-            index_nuisance=0,
+            index_nuisance = 0,
             amplitude="1e-12 TeV-1 cm-2 s-1",  
             amplitude_nuisance = 0,
-            lambda_=  "0.1 TeV-1",
-            lambda__nuisance = 0)
+            lambda_ =  "0.1 TeV-1",
+            E_nuisance = 0)
+
         #print(len(model_spectrum.parameters))
         #print(len(model_spectrum.default_parameters))
 
