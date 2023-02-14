@@ -5,22 +5,22 @@ components:
         type: ExpCutoffPowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.3018099842435285
-            error: 0.1574622503158369
+            value: 2.301317659477022
+            error: 0.3041297244754255
             is_penalised: false
         -   name: amplitude
-            value: 1.113404470361341e-12
+            value: 1.0870032725906917e-12
             unit: cm-2 s-1 TeV-1
-            error: 1.372050951976678e-13
+            error: 1.3561367687263562e-13
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
             is_penalised: false
         -   name: lambda_
-            value: 0.10025182042511319
+            value: 0.1002979720493855
             unit: TeV-1
-            error: 0.047551174483361075
+            error: 0.09533044135898028
             is_penalised: false
         -   name: alpha
             value: 1.0
@@ -40,9 +40,9 @@ components:
             frozen: true
             is_penalised: false
         -   name: sigma
-            value: 0.020993061850946883
+            value: 0.021022056048317417
             unit: deg
-            error: 0.0215410686224121
+            error: 0.01960052549738805
             is_penalised: false
         -   name: e
             value: 0.0
@@ -53,17 +53,17 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - joNXeHQZ
+    - VJjQV8gu
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
-            value: 0.9999908326240797
-            error: 0.0020665531569145495
+            value: 0.9999976989906271
+            error: 0.0019365624338114167
             is_penalised: false
         -   name: tilt
-            value: -1.3854893151219477e-05
-            error: 0.0019615811015442413
+            value: -2.0324230403344602e-06
+            error: 0.0017739181621937445
             frozen: false
             is_penalised: false
         -   name: reference

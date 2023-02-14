@@ -5,22 +5,22 @@ components:
         type: ExpCutoffPowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.2932656623447274
-            error: 0.1607779596098793
+            value: 2.2933184126602137
+            error: 0.16557005929590415
             is_penalised: false
         -   name: amplitude
-            value: 9.119417320485696e-13
+            value: 9.18108987217612e-13
             unit: cm-2 s-1 TeV-1
-            error: 1.1352141078482069e-13
+            error: 1.225670694023877e-13
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
             is_penalised: false
         -   name: lambda_
-            value: 0.10278124093494943
+            value: 0.102829065384343
             unit: TeV-1
-            error: 0.05002339037118561
+            error: 0.05124896145285308
             is_penalised: false
         -   name: alpha
             value: 1.0
@@ -40,9 +40,9 @@ components:
             frozen: true
             is_penalised: false
         -   name: sigma
-            value: 0.021008725502712426
+            value: 0.02101185218435751
             unit: deg
-            error: 0.02168933645829756
+            error: 0.023366786822962324
             is_penalised: false
         -   name: e
             value: 0.0
@@ -53,17 +53,17 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - unAGMJKa
+    - Qyucco00
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
-            value: 1.000017142130433
-            error: 0.00205601337870186
+            value: 1.000016131269683
+            error: 0.002071034799539011
             is_penalised: false
         -   name: tilt
-            value: 1.487811904446984e-05
-            error: 0.0019520853730433199
+            value: 1.5847660304390327e-05
+            error: 0.0019649597701850026
             frozen: false
             is_penalised: false
         -   name: reference
