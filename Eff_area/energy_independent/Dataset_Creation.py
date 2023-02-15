@@ -38,15 +38,17 @@ class sys_dataset():
             lat_0="22.018 deg",
             sigma="0.02 deg",
         )
-        model_spectrum  = ExpCutoffPowerLawSpectralModel(
+        model_spectrum = PowerLawSpectralModel(#ExpCutoffPowerLawSpectralModel(
             index=2.3,
             amplitude="1e-12 TeV-1 cm-2 s-1", 
-            lambda_=  "0.1 TeV-1"  )
+            #lambda_=  "0.1 TeV-1"
+        )
         source_model = SkyModel(spatial_model = model_spatial,
                                spectral_model = model_spectrum,
                                name = "Source")    
         source_model.parameters['lon_0'].frozen = True
         source_model.parameters['lat_0'].frozen = True
+        source_model.parameters['sigma'].frozen = True
         models = Models(source_model)
         return models
     
@@ -57,6 +59,15 @@ class sys_dataset():
         bkg_model = FoVBackgroundModel(dataset_name=dataset.name)
         bkg_model.parameters['tilt'].frozen  = False
         models.append(bkg_model)
+        dataset.models = models
+        
+        if self.rnd:
+            counts_data = np.random.poisson(dataset.npred().data)
+        else:
+            counts_data = dataset.npred().data
+
+        dataset.counts.data = counts_data
+        
         #irf model
         IRFmodel = IRFModel(dataset_name = dataset.name)
         IRFmodel.parameters['tilt_nuisance'].frozen  = False
@@ -65,19 +76,17 @@ class sys_dataset():
         dataset.models = models
         dataset.models.parameters['norm_nuisance'].value  = self.shift
         dataset.models.parameters['tilt_nuisance'].value  = self.tilt
+        dataset.exposure = dataset.npred_exposure()
         
-        if self.rnd:
-            counts_data = np.random.poisson(dataset.npred().data)
-        else:
-            counts_data = dataset.npred().data
-
-        dataset.counts.data = counts_data
         # set models without the IRF model
         models = self.set_model()
         models.append(bkg_model)
         dataset.models = models
+        
         return dataset
     
+    
+
     def create_dataset_N(self):
         dataset_ = self.create_dataset()
         dataset_N = MapDataset(
@@ -97,6 +106,8 @@ class sys_dataset():
         #irf model
         IRFmodel = IRFModel(dataset_name = dataset_N.name)
         IRFmodel.parameters['tilt_nuisance'].frozen  = False
+        IRFmodel.parameters['bias'].frozen  = True
+        IRFmodel.parameters['resolution'].frozen  = True
         models.append(IRFmodel)
         dataset_N.models = models
         return dataset_N

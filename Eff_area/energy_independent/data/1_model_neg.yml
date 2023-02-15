@@ -2,28 +2,20 @@ components:
 -   name: Source
     type: SkyModel
     spectral:
-        type: ExpCutoffPowerLawSpectralModel
+        type: PowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.2933184126602137
-            error: 0.16557005929590415
+            value: 2.3007509442687004
+            error: 0.06175372284529459
             is_penalised: false
         -   name: amplitude
-            value: 9.18108987217612e-13
+            value: 1.0940675350565171e-12
             unit: cm-2 s-1 TeV-1
-            error: 1.225670694023877e-13
+            error: 9.813762653326666e-14
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
-            is_penalised: false
-        -   name: lambda_
-            value: 0.102829065384343
-            unit: TeV-1
-            error: 0.05124896145285308
-            is_penalised: false
-        -   name: alpha
-            value: 1.0
             is_penalised: false
     spatial:
         type: GaussianSpatialModel
@@ -40,9 +32,9 @@ components:
             frozen: true
             is_penalised: false
         -   name: sigma
-            value: 0.02101185218435751
+            value: 0.02
             unit: deg
-            error: 0.023366786822962324
+            frozen: true
             is_penalised: false
         -   name: e
             value: 0.0
@@ -53,17 +45,17 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - jzTIt5u6
+    - CDT6uC4w
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
-            value: 1.000016131269683
-            error: 0.002071034799539011
+            value: 1.0000272429077006
+            error: 0.002065970172255026
             is_penalised: false
         -   name: tilt
-            value: 1.5847660304390327e-05
-            error: 0.0019649597701850026
+            value: 1.911830606106409e-05
+            error: 0.0019612294888680603
             frozen: false
             is_penalised: false
         -   name: reference
