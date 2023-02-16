@@ -2,20 +2,28 @@ components:
 -   name: Source
     type: SkyModel
     spectral:
-        type: PowerLawSpectralModel
+        type: ExpCutoffPowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.3007509442687004
-            error: 0.06175372284529459
+            value: 2.299117907085371
+            error: 0.15770102372748152
             is_penalised: false
         -   name: amplitude
-            value: 1.0940675350565171e-12
+            value: 1.1138742607485561e-12
             unit: cm-2 s-1 TeV-1
-            error: 9.813762653326666e-14
+            error: 1.3682183194145295e-13
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
+            is_penalised: false
+        -   name: lambda_
+            value: 0.101187207573271
+            unit: TeV-1
+            error: 0.04776810050075128
+            is_penalised: false
+        -   name: alpha
+            value: 1.0
             is_penalised: false
     spatial:
         type: GaussianSpatialModel
@@ -45,17 +53,17 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - CDT6uC4w
+    - rtalRIxo
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
-            value: 1.0000272429077006
-            error: 0.002065970172255026
+            value: 0.9999804410995039
+            error: 0.0020664739258273346
             is_penalised: false
         -   name: tilt
-            value: 1.911830606106409e-05
-            error: 0.0019612294888680603
+            value: -1.862052634413259e-05
+            error: 0.001961579665320163
             frozen: false
             is_penalised: false
         -   name: reference

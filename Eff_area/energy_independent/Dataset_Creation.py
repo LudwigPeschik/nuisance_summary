@@ -38,10 +38,10 @@ class sys_dataset():
             lat_0="22.018 deg",
             sigma="0.02 deg",
         )
-        model_spectrum = PowerLawSpectralModel(#ExpCutoffPowerLawSpectralModel(
+        model_spectrum = ExpCutoffPowerLawSpectralModel(
             index=2.3,
             amplitude="1e-12 TeV-1 cm-2 s-1", 
-            #lambda_=  "0.1 TeV-1"
+            lambda_=  "0.1 TeV-1"
         )
         source_model = SkyModel(spatial_model = model_spatial,
                                spectral_model = model_spectrum,
