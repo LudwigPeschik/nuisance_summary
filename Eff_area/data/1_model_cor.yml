@@ -5,22 +5,22 @@ components:
         type: ExpCutoffPowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.3000147784348908
-            error: 0.15727399203008516
+            value: 2.3
+            error: 0.15723862830492105
             is_penalised: false
         -   name: amplitude
-            value: 1.0000014085394713e-12
+            value: 1.0e-12
             unit: cm-2 s-1 TeV-1
-            error: 1.2284181256941673e-13
+            error: 1.2341778557925224e-13
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
             is_penalised: false
         -   name: lambda_
-            value: 0.10000479938905592
+            value: 0.1
             unit: TeV-1
-            error: 0.04732152509820457
+            error: 0.04762308948792854
             is_penalised: false
         -   name: alpha
             value: 1.0
@@ -40,9 +40,9 @@ components:
             frozen: true
             is_penalised: false
         -   name: sigma
-            value: 0.020009682787219398
+            value: 0.02
             unit: deg
-            error: 0.018485522748963992
+            frozen: true
             is_penalised: false
         -   name: e
             value: 0.0
@@ -53,17 +53,17 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - NHCeclgj
+    - 6s3qahTQ
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
-            value: 1.000000087926757
-            error: 0.002066539512841799
+            value: 1.0
+            error: 0.0020630035071734884
             is_penalised: false
         -   name: tilt
-            value: 9.70030584818278e-08
-            error: 0.0019615768705985095
+            value: 0.0
+            error: 0.0019583305078536644
             frozen: false
             is_penalised: false
         -   name: reference

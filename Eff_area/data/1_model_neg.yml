@@ -5,22 +5,22 @@ components:
         type: ExpCutoffPowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.2821723373930327
-            error: 0.11691599261492723
+            value: 2.316708172475992
+            error: 0.15756444749802362
             is_penalised: false
         -   name: amplitude
-            value: 9.172668868334223e-13
+            value: 1.1130293778088317e-12
             unit: cm-2 s-1 TeV-1
-            error: 1.151016066939013e-13
+            error: 1.3652786572238134e-13
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
             is_penalised: false
         -   name: lambda_
-            value: 0.10145036308984115
+            value: 0.10041210194202617
             unit: TeV-1
-            error: 0.02430544117073408
+            error: 0.04762579339931406
             is_penalised: false
         -   name: alpha
             value: 1.0
@@ -40,9 +40,9 @@ components:
             frozen: true
             is_penalised: false
         -   name: sigma
-            value: 0.021011063773946126
+            value: 0.02
             unit: deg
-            error: 0.020592174407458752
+            frozen: true
             is_penalised: false
         -   name: e
             value: 0.0
@@ -53,17 +53,17 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - PsFSTfXH
+    - -QxuHosW
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
-            value: 0.999998378578898
-            error: 0.0019880670965207463
+            value: 1.0000019642153872
+            error: 0.0020665109223784693
             is_penalised: false
         -   name: tilt
-            value: 8.835254682159425e-06
-            error: 0.001939268602388021
+            value: 1.6498660488893386e-06
+            error: 0.001961593660390072
             frozen: false
             is_penalised: false
         -   name: reference
