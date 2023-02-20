@@ -53,7 +53,7 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - KkmlX4ag
+    - Z-ugGDdF
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
