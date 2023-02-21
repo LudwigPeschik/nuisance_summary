@@ -1,0 +1,73 @@
+components:
+-   name: Source
+    type: SkyModel
+    spectral:
+        type: ExpCutoffPowerLawSpectralModel
+        parameters:
+        -   name: index
+            value: 2.318175689080183
+            error: 0.20082126802311115
+            is_penalised: false
+        -   name: amplitude
+            value: 1.1144749178379482e-12
+            unit: cm-2 s-1 TeV-1
+            error: 1.898764735182491e-13
+            is_penalised: false
+        -   name: reference
+            value: 1.0
+            unit: TeV
+            is_penalised: false
+        -   name: lambda_
+            value: 0.10075643823720398
+            unit: TeV-1
+            error: 0.06336425115392057
+            is_penalised: false
+        -   name: alpha
+            value: 1.0
+            is_penalised: false
+    spatial:
+        type: GaussianSpatialModel
+        frame: icrs
+        parameters:
+        -   name: lon_0
+            value: 83.631
+            unit: deg
+            frozen: true
+            is_penalised: false
+        -   name: lat_0
+            value: 22.018
+            unit: deg
+            frozen: true
+            is_penalised: false
+        -   name: sigma
+            value: 0.1
+            unit: deg
+            frozen: true
+            is_penalised: false
+        -   name: e
+            value: 0.0
+            is_penalised: false
+        -   name: phi
+            value: 0.0
+            unit: deg
+            is_penalised: false
+-   type: FoVBackgroundModel
+    datasets_names:
+    - H2UuNDJ2
+    spectral:
+        type: PowerLawNormSpectralModel
+        parameters:
+        -   name: norm
+            value: 1.0000131688816116
+            error: 0.002076217794560691
+            is_penalised: false
+        -   name: tilt
+            value: 6.436973814556373e-06
+            error: 0.001969822662838578
+            frozen: false
+            is_penalised: false
+        -   name: reference
+            value: 1.0
+            unit: TeV
+            is_penalised: false
+covariance: 1d_model_neg_s0.1_covariance.dat
