@@ -53,7 +53,7 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - Sf-Kbfei
+    - QmS5AWTM
     spectral:
         type: PowerLawNormSpectralModel
         parameters:

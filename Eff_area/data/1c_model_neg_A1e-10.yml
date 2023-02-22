@@ -53,7 +53,7 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - U4FeYVVi
+    - 18SnTGoE
     spectral:
         type: PowerLawNormSpectralModel
         parameters:

@@ -18,7 +18,7 @@ components:
             unit: TeV
             is_penalised: false
         -   name: lambda_
-            value: 0.10000818701430014
+            value: 0.10000818701430017
             unit: TeV-1
             error: 0.0036221824744849143
             is_penalised: false
@@ -53,7 +53,7 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - rLerZ1l0
+    - xCNBemzh
     spectral:
         type: PowerLawNormSpectralModel
         parameters:

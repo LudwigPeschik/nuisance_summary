@@ -53,7 +53,7 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - EDbv_jZE
+    - iIoa-Eux
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
