@@ -53,7 +53,7 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - vc2SX-J7
+    - klSTMXlP
     spectral:
         type: PowerLawNormSpectralModel
         parameters:

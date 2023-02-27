@@ -53,7 +53,7 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - OPL2AiOV
+    - k-Y3-ISd
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
