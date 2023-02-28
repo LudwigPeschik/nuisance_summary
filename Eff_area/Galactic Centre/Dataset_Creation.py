@@ -19,7 +19,7 @@ from gammapy.maps import Map
 from gammapy.modeling.models import SpectralModel
 from gammapy.modeling.models.cube import IRFModel
 
-path_gc = 'C:/Users/yt02izug/Downloads/nuisance_summary/Eff_area/Galactic Centre'
+path_gc = 'C:/Users/yt02izug/Downloads/nuisance_summary/Eff_area/Galactic Centre/data'
 path = 'C:/Users/yt02izug/Downloads'
 
 #ExpCutoffPowerLaw instead of Powerlaw
@@ -36,7 +36,7 @@ class sys_dataset():
         self.rnd = rnd
         
     def set_model(self):
-        models = Models.read(f"{path_gc}/GC_model.yml").copy()
+        models = Models.read(f"{path_gc}/1_model_standard_best_fit_mask.yml").copy()
         diff = Map.read(f'{path}/diffusetemplate.fits')
         new_geom = diff.geom.rename_axes(['energy'], ['energy_true'])
         diff_new = Map.from_geom(geom = new_geom, data = diff.data, unit = diff.unit) 

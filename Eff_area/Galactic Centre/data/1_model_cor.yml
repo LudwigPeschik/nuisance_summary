@@ -5,22 +5,22 @@ components:
         type: ExpCutoffPowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.365347883057737
-            error: 3.542634862359526e-05
+            value: 2.0514143707587715
+            error: .nan
             is_penalised: false
         -   name: amplitude
-            value: 8.823181865456164e-13
+            value: 2.772850019895054e-12
             unit: cm-2 s-1 TeV-1
-            error: 2.39343626817813e-17
+            error: .nan
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
             is_penalised: false
         -   name: lambda_
-            value: 0.06106493126072116
+            value: 0.0885903362718342
             unit: TeV-1
-            error: 1.1913319460388652e-05
+            error: .nan
             is_penalised: false
         -   name: alpha
             value: 1.0
@@ -30,14 +30,14 @@ components:
         frame: galactic
         parameters:
         -   name: lon_0
-            value: 3.850179255226638e-18
+            value: -0.05734954028304194
             unit: deg
-            error: 1.91089523675691e-06
+            error: .nan
             is_penalised: false
         -   name: lat_0
-            value: 0.0
+            value: -0.0492799320109225
             unit: deg
-            error: 1.909566107915976e-06
+            error: .nan
             is_penalised: false
 -   name: g09
     type: SkyModel
@@ -45,13 +45,13 @@ components:
         type: PowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.2970130703816154
-            error: 3.636005653662288e-05
+            value: 2.4068334421999307
+            error: .nan
             is_penalised: false
         -   name: amplitude
-            value: 5.940290978325817e-13
+            value: 6.378526441489129e-13
             unit: cm-2 s-1 TeV-1
-            error: 2.2603340204380357e-17
+            error: .nan
             is_penalised: false
         -   name: reference
             value: 1.0
@@ -62,14 +62,14 @@ components:
         frame: galactic
         parameters:
         -   name: lon_0
-            value: 0.8866507886679887
+            value: 0.8687960636604846
             unit: deg
-            error: 2.562286183913497e-06
+            error: .nan
             is_penalised: false
         -   name: lat_0
-            value: 0.08710273413300457
+            value: 0.07397190739891812
             unit: deg
-            error: 2.5958633117885017e-06
+            error: .nan
             is_penalised: false
 -   name: '1745'
     type: SkyModel
@@ -77,13 +77,13 @@ components:
         type: PowerLawSpectralModel
         parameters:
         -   name: index
-            value: 9.881003687962531
-            error: 0.034456309252124055
+            value: 9.881003691942205
+            error: .nan
             is_penalised: false
         -   name: amplitude
-            value: 3.0172212850120604e-15
+            value: 3.0122061800929984e-15
             unit: cm-2 s-1 TeV-1
-            error: 5.336929579322924e-17
+            error: .nan
             is_penalised: false
         -   name: reference
             value: 1.0
@@ -94,19 +94,19 @@ components:
         frame: galactic
         parameters:
         -   name: lon_0
-            value: 355.31064597609696
+            value: 355.31064695831265
             unit: deg
-            error: 0.2044608652859832
+            error: .nan
             is_penalised: false
         -   name: lat_0
-            value: 1.4480121320382295
+            value: 1.4480105378025598
             unit: deg
-            error: 0.29997346559893445
+            error: .nan
             is_penalised: false
         -   name: sigma
-            value: 3.2308826108036417
+            value: 3.230882471484655
             unit: deg
-            error: 0.007111745128399366
+            error: .nan
             is_penalised: false
         -   name: e
             value: 0.0
@@ -121,13 +121,13 @@ components:
         type: PowerLawSpectralModel
         parameters:
         -   name: index
-            value: 3.014624726042909
-            error: 0.0008221509575838595
+            value: 3.4342937381876357
+            error: .nan
             is_penalised: false
         -   name: amplitude
-            value: 2.517284943381014e-13
+            value: 6.298930241411873e-14
             unit: cm-2 s-1 TeV-1
-            error: 1.5354517389853237e-17
+            error: .nan
             is_penalised: false
         -   name: reference
             value: 1.0
@@ -138,14 +138,14 @@ components:
         frame: galactic
         parameters:
         -   name: lon_0
-            value: 0.6149438465046431
+            value: 0.6066997957325425
             unit: deg
-            error: 4.833220034550764e-05
+            error: .nan
             is_penalised: false
         -   name: lat_0
-            value: 0.11666400825522488
+            value: 0.0013463496552285506
             unit: deg
-            error: 4.409268989107345e-05
+            error: .nan
             is_penalised: false
 -   name: diff
     type: SkyModel
@@ -153,8 +153,8 @@ components:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
-            value: 0.9999999999999993
-            error: 0.0003872589938726647
+            value: 3.4619200101170224
+            error: .nan
             is_penalised: false
         -   name: tilt
             value: 0.0
@@ -172,17 +172,17 @@ components:
         unit: 1 / (cm2 s sr TeV)
 -   type: FoVBackgroundModel
     datasets_names:
-    - gdb7U_vs
+    - CD62W3gY
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
-            value: 1.0
-            error: 1.6413198168063292e-06
+            value: 0.9946324076894387
+            error: .nan
             is_penalised: false
         -   name: tilt
-            value: 5.077655141495231e-19
-            error: 1.0674445721436774e-05
+            value: 6.3456466013791e-11
+            error: .nan
             frozen: false
             is_penalised: false
         -   name: reference
