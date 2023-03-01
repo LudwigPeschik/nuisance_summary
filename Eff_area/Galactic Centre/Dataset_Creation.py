@@ -37,12 +37,20 @@ class sys_dataset():
         
     def set_model(self):
         models = Models.read(f"{path_gc}/1_model_standard_best_fit_mask.yml").copy()
+        
         diff = Map.read(f'{path}/diffusetemplate.fits')
         new_geom = diff.geom.rename_axes(['energy'], ['energy_true'])
         diff_new = Map.from_geom(geom = new_geom, data = diff.data, unit = diff.unit) 
         temp = TemplateSpatialModel(diff_new, normalize=False, filename = f'{path}/diffusetemplate.fits')
         diff = SkyModel(spatial_model=temp, name = 'diff', spectral_model = PowerLawNormSpectralModel())
         models.append(diff)
+        
+        models[0].parameters['lon_0'].frozen = True
+        models[0].parameters['lat_0'].frozen = True
+        models[1].parameters['lon_0'].frozen = True
+        models[1].parameters['lat_0'].frozen = True
+        models[2].parameters['lon_0'].frozen = True
+        models[2].parameters['lat_0'].frozen = True
        
         #source_model.parameters['lon_0'].frozen = True
         #source_model.parameters['lat_0'].frozen = True
