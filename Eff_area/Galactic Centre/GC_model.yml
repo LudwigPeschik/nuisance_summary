@@ -1,6 +1,6 @@
 {components: [{name: Source, spatial: {frame: galactic, parameters: [{error: .nan, is_norm: false,
-            name: lon_0, unit: deg, value: 0.0}, {error: .nan, is_norm: false,
-            name: lat_0, unit: deg, value: 0.0}], type: PointSpatialModel},
+            name: lon_0, unit: deg, value: 359.94}, {error: .nan, is_norm: false,
+            name: lat_0, unit: deg, value: -0.05}], type: PointSpatialModel},
       spectral: {parameters: [{error: .nan, is_norm: false, name: index, value: 2.3653478830577463},
           {error: .nan, is_norm: true, name: amplitude, unit: cm-2 s-1 TeV-1, value: 8.823174419550324e-13},
           {frozen: true, is_norm: false, name: reference, unit: TeV, value: 1.0},

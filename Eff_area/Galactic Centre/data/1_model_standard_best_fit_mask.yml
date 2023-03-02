@@ -5,22 +5,22 @@ components:
         type: ExpCutoffPowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.032882445740502
-            error: 0.014221299023619988
+            value: 2.050614979527273
+            error: 0.0387962097995439
             is_penalised: false
         -   name: amplitude
-            value: 2.3334808683333326e-12
+            value: 2.76866354551871e-12
             unit: cm-2 s-1 TeV-1
-            error: 2.7505452614399263e-14
+            error: 8.228793349384577e-14
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
             is_penalised: false
         -   name: lambda_
-            value: 0.09411521078521967
+            value: 0.08880201229840431
             unit: TeV-1
-            error: 0.004149198196632583
+            error: 0.013538299688447261
             is_penalised: false
         -   name: alpha
             value: 1.0
@@ -30,12 +30,12 @@ components:
         frame: galactic
         parameters:
         -   name: lon_0
-            value: 0.0
+            value: 359.94
             unit: deg
             frozen: true
             is_penalised: false
         -   name: lat_0
-            value: 0.0
+            value: -0.05
             unit: deg
             frozen: true
             is_penalised: false
@@ -45,13 +45,13 @@ components:
         type: PowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.4073938784565048
-            error: 0.031091601450231886
+            value: 2.4092185775196557
+            error: 0.0633257733026506
             is_penalised: false
         -   name: amplitude
-            value: 5.819971221964772e-13
+            value: 6.153894974707234e-13
             unit: cm-2 s-1 TeV-1
-            error: 1.8864933621267384e-14
+            error: 4.0836204401939135e-14
             is_penalised: false
         -   name: reference
             value: 1.0
@@ -71,51 +71,19 @@ components:
             unit: deg
             frozen: true
             is_penalised: false
--   name: '1746'
-    type: SkyModel
-    spectral:
-        type: PowerLawSpectralModel
-        parameters:
-        -   name: index
-            value: 6.57649156243678
-            error: 0.5254345682841619
-            is_penalised: false
-        -   name: amplitude
-            value: 6.326450990186807e-16
-            unit: cm-2 s-1 TeV-1
-            error: 8.361796869075082e-16
-            is_penalised: false
-        -   name: reference
-            value: 1.0
-            unit: TeV
-            is_penalised: false
-    spatial:
-        type: PointSpatialModel
-        frame: galactic
-        parameters:
-        -   name: lon_0
-            value: 0.614943846504643
-            unit: deg
-            frozen: true
-            is_penalised: false
-        -   name: lat_0
-            value: 0.1166640082552277
-            unit: deg
-            frozen: true
-            is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - 2D10yaj2
+    - f-yGT6WO
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
-            value: 1.0561149356743509
-            error: 0.000687258789800418
+            value: 1.05712605983747
+            error: 0.0016230162499877299
             is_penalised: false
         -   name: tilt
-            value: 0.07504806384799845
-            error: 0.000847443212152684
+            value: 0.07466771791931828
+            error: 0.0019226264778290348
             frozen: false
             is_penalised: false
         -   name: reference
