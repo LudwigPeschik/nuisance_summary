@@ -1,0 +1,293 @@
+components:
+-   name: Source
+    type: SkyModel
+    spectral:
+        type: ExpCutoffPowerLawSpectralModel
+        parameters:
+        -   name: index
+            value: 2.030245065296281
+            unit: ''
+            error: 0.04098248049555129
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+        -   name: amplitude
+            value: 2.7351285488707767e-12
+            unit: cm-2 s-1 TeV-1
+            error: 5.064065151626613e-13
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: log
+            scale_method: scale10
+            is_norm: true
+            is_penalised: false
+        -   name: reference
+            value: 1.0
+            unit: TeV
+            error: 0.0
+            min: .nan
+            max: .nan
+            frozen: true
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+        -   name: lambda_
+            value: 0.0888134983549071
+            unit: TeV-1
+            error: 0.01307448361648773
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+        -   name: alpha
+            value: 1.0
+            unit: ''
+            error: 0.0
+            min: .nan
+            max: .nan
+            frozen: true
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+    spatial:
+        type: PointSpatialModel
+        frame: galactic
+        parameters:
+        -   name: lon_0
+            value: 359.94272693030285
+            unit: deg
+            error: 0.001343991686306572
+            min: 358.94
+            max: 360.94
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+        -   name: lat_0
+            value: -0.049186321557708794
+            unit: deg
+            error: 0.001324574014540881
+            min: -1.05
+            max: 0.95
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+-   name: g09
+    type: SkyModel
+    spectral:
+        type: PowerLawSpectralModel
+        parameters:
+        -   name: index
+            value: 2.391377953548279
+            unit: ''
+            error: 0.06228541407637974
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+        -   name: amplitude
+            value: 6.28784794433298e-13
+            unit: cm-2 s-1 TeV-1
+            error: 1.243922541815823e-13
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: log
+            scale_method: scale10
+            is_norm: true
+            is_penalised: false
+        -   name: reference
+            value: 1.0
+            unit: TeV
+            error: 0.0
+            min: .nan
+            max: .nan
+            frozen: true
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+    spatial:
+        type: PointSpatialModel
+        frame: galactic
+        parameters:
+        -   name: lon_0
+            value: 0.8684625505265031
+            unit: deg
+            error: 0.004324679350372063
+            min: -0.11334921133201126
+            max: 1.8866507886679886
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+        -   name: lat_0
+            value: 0.07439078620694786
+            unit: deg
+            error: 0.004273687625165504
+            min: -0.9128972658670035
+            max: 1.0871027341329964
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+-   name: diff
+    type: SkyModel
+    spectral:
+        type: PowerLawNormSpectralModel
+        parameters:
+        -   name: norm
+            value: 2.852377275509006
+            unit: ''
+            error: 0.5387223988586249
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: log
+            scale_method: scale10
+            is_norm: true
+            is_penalised: false
+        -   name: tilt
+            value: 0.07551010765138676
+            unit: ''
+            error: 0.029719875824437532
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+        -   name: reference
+            value: 1.0
+            unit: TeV
+            error: 0.0
+            min: .nan
+            max: .nan
+            frozen: true
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+    spatial:
+        type: TemplateSpatialModel
+        frame: galactic
+        parameters: []
+        filename: C:\Users\yt02izug\Downloads\diffusetemplate.fits
+        normalize: false
+        unit: 1 / (cm2 s sr TeV)
+-   type: FoVBackgroundModel
+    datasets_names:
+    - oKJ2zs6b
+    spectral:
+        type: PowerLawNormSpectralModel
+        parameters:
+        -   name: norm
+            value: 1.0571048819427318
+            unit: ''
+            error: 0.0016165659303589454
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: log
+            scale_method: scale10
+            is_norm: true
+            is_penalised: false
+        -   name: tilt
+            value: 0.07331907837816509
+            unit: ''
+            error: 0.001964949076841281
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+        -   name: reference
+            value: 1.0
+            unit: TeV
+            error: 0.0
+            min: .nan
+            max: .nan
+            frozen: true
+            interp: lin
+            scale_method: scale10
+            is_norm: false
+            is_penalised: false
+-   type: IRFModel
+    parameters:
+    -   name: norm_nuisance
+        value: -0.0006168060800164449
+        unit: ''
+        error: 0.18232474587526004
+        min: .nan
+        max: .nan
+        frozen: false
+        interp: log
+        scale_method: scale10
+        is_norm: true
+        is_penalised: true
+    -   name: tilt_nuisance
+        value: -0.00012525330059986165
+        unit: ''
+        error: 0.014430590807563164
+        min: .nan
+        max: .nan
+        frozen: false
+        interp: lin
+        scale_method: scale10
+        is_norm: false
+        is_penalised: true
+    -   name: reference
+        value: 1.0
+        unit: TeV
+        error: 0.0
+        min: .nan
+        max: .nan
+        frozen: true
+        interp: lin
+        scale_method: scale10
+        is_norm: false
+        is_penalised: false
+    -   name: bias
+        value: 0.0
+        unit: ''
+        error: 0.0
+        min: .nan
+        max: .nan
+        frozen: true
+        interp: lin
+        scale_method: scale10
+        is_norm: false
+        is_penalised: true
+    -   name: resolution
+        value: 0.0
+        unit: ''
+        error: 0.0
+        min: .nan
+        max: .nan
+        frozen: true
+        interp: lin
+        scale_method: scale10
+        is_norm: false
+        is_penalised: true
+covariance: 1_model_standard_nuisance_fit_mask_full_covariance.dat

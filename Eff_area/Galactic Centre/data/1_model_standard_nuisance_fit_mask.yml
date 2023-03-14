@@ -5,39 +5,85 @@ components:
         type: ExpCutoffPowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.0250550756179067
-            error: 0.040875482195177816
+            value: 2.030245065296281
+            unit: ''
+            error: 0.04098248049555129
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
         -   name: amplitude
-            value: 2.763032943193836e-12
+            value: 2.7351285488707767e-12
             unit: cm-2 s-1 TeV-1
-            error: 5.214023705350115e-13
+            error: 5.064065151626613e-13
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: log
+            scale_method: scale10
+            is_norm: true
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
+            error: 0.0
+            min: .nan
+            max: .nan
+            frozen: true
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
         -   name: lambda_
-            value: 0.08895588351718643
+            value: 0.0888134983549071
             unit: TeV-1
-            error: 0.013225169599740358
+            error: 0.01307448361648773
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
         -   name: alpha
             value: 1.0
+            unit: ''
+            error: 0.0
+            min: .nan
+            max: .nan
+            frozen: true
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
     spatial:
         type: PointSpatialModel
         frame: galactic
         parameters:
         -   name: lon_0
-            value: 359.94
+            value: 359.94272693030285
             unit: deg
-            frozen: true
+            error: 0.001343991686306572
+            min: 358.94
+            max: 360.94
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
         -   name: lat_0
-            value: -0.05
+            value: -0.049186321557708794
             unit: deg
-            frozen: true
+            error: 0.001324574014540881
+            min: -1.05
+            max: 0.95
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
 -   name: g09
     type: SkyModel
@@ -45,49 +91,101 @@ components:
         type: PowerLawSpectralModel
         parameters:
         -   name: index
-            value: 2.38543871060132
-            error: 0.06480903110915952
+            value: 2.391377953548279
+            unit: ''
+            error: 0.06228541407637974
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
         -   name: amplitude
-            value: 6.116952992097243e-13
+            value: 6.28784794433298e-13
             unit: cm-2 s-1 TeV-1
-            error: 1.236171701116928e-13
+            error: 1.243922541815823e-13
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: log
+            scale_method: scale10
+            is_norm: true
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
+            error: 0.0
+            min: .nan
+            max: .nan
+            frozen: true
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
     spatial:
         type: PointSpatialModel
         frame: galactic
         parameters:
         -   name: lon_0
-            value: 0.8866507886679887
+            value: 0.8684625505265031
             unit: deg
-            frozen: true
+            error: 0.004324679350372063
+            min: -0.11334921133201126
+            max: 1.8866507886679886
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
         -   name: lat_0
-            value: 0.0871027341329965
+            value: 0.07439078620694786
             unit: deg
-            frozen: true
+            error: 0.004273687625165504
+            min: -0.9128972658670035
+            max: 1.0871027341329964
+            frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - 0Wap_Nna
+    - oKJ2zs6b
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
-            value: 1.0570673575788674
-            error: 0.001616229265542079
+            value: 1.0571048819427318
+            unit: ''
+            error: 0.0016165659303589454
+            min: .nan
+            max: .nan
+            frozen: false
+            interp: log
+            scale_method: scale10
+            is_norm: true
             is_penalised: false
         -   name: tilt
-            value: 0.07433662471610862
-            error: 0.001924519872566786
+            value: 0.07331907837816509
+            unit: ''
+            error: 0.001964949076841281
+            min: .nan
+            max: .nan
             frozen: false
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
         -   name: reference
             value: 1.0
             unit: TeV
+            error: 0.0
+            min: .nan
+            max: .nan
+            frozen: true
+            interp: lin
+            scale_method: scale10
+            is_norm: false
             is_penalised: false
 covariance: 1_model_standard_nuisance_fit_mask_covariance.dat

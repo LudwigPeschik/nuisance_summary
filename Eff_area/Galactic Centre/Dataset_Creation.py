@@ -42,6 +42,12 @@ class sys_dataset():
         diff_new = Map.from_geom(geom = new_geom, data = diff.data, unit = diff.unit) 
         temp = TemplateSpatialModel(diff_new, normalize=False, filename = f'{path}/diffusetemplate.fits')
         diff = SkyModel(spatial_model=temp, name = 'diff', spectral_model = PowerLawNormSpectralModel())
+        #Values from dataset_standard best fit (without nuisance)
+        diff.parameters['tilt'].value = 0.07545879357806834
+        diff.parameters['tilt'].error = 0.02658390520205726
+        diff.parameters['norm'].value = 2.8506776847212123
+        diff.parameters['norm'].error = 0.08440779649209731
+        diff.parameters['tilt'].frozen = False
         models.append(diff)
        
         #source_model.parameters['lon_0'].frozen = True
