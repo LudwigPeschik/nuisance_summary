@@ -6,12 +6,12 @@ components:
         parameters:
         -   name: index
             value: 2.030101390516945
-            error: 0.03948446845541315
+            error: 0.04845794738977275
             is_penalised: false
         -   name: amplitude
             value: 2.733011434009236e-12
             unit: cm-2 s-1 TeV-1
-            error: 8.445502802971838e-14
+            error: 9.45173579474222e-14
             is_penalised: false
         -   name: reference
             value: 1.0
@@ -20,7 +20,7 @@ components:
         -   name: lambda_
             value: 0.08874510187310557
             unit: TeV-1
-            error: 0.014264302289073548
+            error: 0.01773822151899145
             is_penalised: false
         -   name: alpha
             value: 1.0
@@ -32,14 +32,14 @@ components:
         -   name: lon_0
             value: 359.9427254114711
             unit: deg
-            error: 0.0013164949906697657
+            error: 0.001315372914184524
             min: 358.94
             max: 360.94
             is_penalised: false
         -   name: lat_0
             value: -0.0491849334784024
             unit: deg
-            error: 0.00130784643724978
+            error: 0.0013062903512948154
             min: -1.05
             max: 0.95
             is_penalised: false
@@ -50,12 +50,12 @@ components:
         parameters:
         -   name: index
             value: 2.3892066626749764
-            error: 0.06698824665453283
+            error: 0.06734983987720895
             is_penalised: false
         -   name: amplitude
             value: 6.300747778491727e-13
             unit: cm-2 s-1 TeV-1
-            error: 4.077039812715023e-14
+            error: 4.1064184741288505e-14
             is_penalised: false
         -   name: reference
             value: 1.0
@@ -68,30 +68,30 @@ components:
         -   name: lon_0
             value: 0.8684839997094308
             unit: deg
-            error: 0.004367830074308256
+            error: 0.00438114757893043
             min: -0.11334921133201126
             max: 1.8866507886679886
             is_penalised: false
         -   name: lat_0
             value: 0.07435814096407782
             unit: deg
-            error: 0.004319326123713012
+            error: 0.004318449929737475
             min: -0.9128972658670035
             max: 1.0871027341329964
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - JXiN1-UQ
+    - yQYfzI1b
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
         -   name: norm
             value: 1.0
-            error: 0.0015629603853033586
+            error: 0.0015631595165528026
             is_penalised: false
         -   name: tilt
             value: 0.0
-            error: 0.001974444894581582
+            error: 0.001975210358408869
             frozen: false
             is_penalised: false
         -   name: reference

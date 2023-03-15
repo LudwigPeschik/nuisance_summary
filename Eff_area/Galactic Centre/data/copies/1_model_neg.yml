@@ -1,0 +1,93 @@
+components:
+-   name: Source
+    type: SkyModel
+    spectral:
+        type: ExpCutoffPowerLawSpectralModel
+        parameters:
+        -   name: index
+            value: 2.065906603364019
+            error: 0.03818439683402513
+            is_penalised: false
+        -   name: amplitude
+            value: 3.0805587921529883e-12
+            unit: cm-2 s-1 TeV-1
+            error: 9.11264618098168e-14
+            is_penalised: false
+        -   name: reference
+            value: 1.0
+            unit: TeV
+            is_penalised: false
+        -   name: lambda_
+            value: 0.089331224539148
+            unit: TeV-1
+            error: 0.014158900766222457
+            is_penalised: false
+        -   name: alpha
+            value: 1.0
+            is_penalised: false
+    spatial:
+        type: PointSpatialModel
+        frame: galactic
+        parameters:
+        -   name: lon_0
+            value: 359.94
+            unit: deg
+            frozen: true
+            is_penalised: false
+        -   name: lat_0
+            value: -0.05
+            unit: deg
+            frozen: true
+            is_penalised: false
+-   name: g09
+    type: SkyModel
+    spectral:
+        type: PowerLawSpectralModel
+        parameters:
+        -   name: index
+            value: 2.427441882532944
+            error: 0.0666842932360645
+            is_penalised: false
+        -   name: amplitude
+            value: 6.844825599442272e-13
+            unit: cm-2 s-1 TeV-1
+            error: 4.3581517186896894e-14
+            is_penalised: false
+        -   name: reference
+            value: 1.0
+            unit: TeV
+            is_penalised: false
+    spatial:
+        type: PointSpatialModel
+        frame: galactic
+        parameters:
+        -   name: lon_0
+            value: 0.8866507886679887
+            unit: deg
+            frozen: true
+            is_penalised: false
+        -   name: lat_0
+            value: 0.0871027341329965
+            unit: deg
+            frozen: true
+            is_penalised: false
+-   type: FoVBackgroundModel
+    datasets_names:
+    - A_sHentk
+    spectral:
+        type: PowerLawNormSpectralModel
+        parameters:
+        -   name: norm
+            value: 1.000018230597445
+            error: 0.0015570858214092145
+            is_penalised: false
+        -   name: tilt
+            value: 0.00010754288993214906
+            error: 0.001904105472022441
+            frozen: false
+            is_penalised: false
+        -   name: reference
+            value: 1.0
+            unit: TeV
+            is_penalised: false
+covariance: 1_model_neg_covariance.dat
