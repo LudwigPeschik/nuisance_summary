@@ -61,6 +61,11 @@ class sys_dataset():
         #bkg model
         bkg_model = FoVBackgroundModel(dataset_name=dataset.name)
         bkg_model.parameters['tilt'].frozen  = False
+        #Values from dataset_standard best fit (without nuisance)
+        bkg_model.parameters['norm'].value = 1.0571040747392333
+        bkg_model.parameters['norm'].error = 0.0016241935677204344
+        bkg_model.parameters['tilt'].value = 0.07331379897643611
+        bkg_model.parameters['tilt'].error = 0.001975509739542813
         models.append(bkg_model)
         dataset.models = models
         
@@ -105,6 +110,11 @@ class sys_dataset():
         #bkg model
         bkg_model = FoVBackgroundModel(dataset_name=dataset_N.name)
         bkg_model.parameters['tilt'].frozen  = False
+        #Values from dataset_standard best fit (without nuisance)
+        bkg_model.parameters['norm'].value = 1.0571040747392333
+        bkg_model.parameters['norm'].error = 0.0016241935677204344
+        bkg_model.parameters['tilt'].value = 0.07331379897643611
+        bkg_model.parameters['tilt'].error = 0.001975509739542813
         models.append(bkg_model)
         #irf model
         IRFmodel = IRFModel(dataset_name = dataset_N.name)
