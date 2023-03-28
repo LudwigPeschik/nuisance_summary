@@ -151,7 +151,7 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - Y-t48YpH
+    - uvAyHk5S
     spectral:
         type: PowerLawNormSpectralModel
         parameters:

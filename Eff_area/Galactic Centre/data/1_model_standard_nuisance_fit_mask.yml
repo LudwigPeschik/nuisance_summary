@@ -151,7 +151,7 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - oKJ2zs6b
+    - tnGX-DQN
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
