@@ -151,7 +151,7 @@ components:
             is_penalised: false
 -   type: FoVBackgroundModel
     datasets_names:
-    - sSGaX3ti
+    - uHTZmlm3
     spectral:
         type: PowerLawNormSpectralModel
         parameters:

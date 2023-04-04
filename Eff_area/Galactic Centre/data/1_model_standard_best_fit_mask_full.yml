@@ -196,7 +196,7 @@ components:
         unit: 1 / (cm2 s sr TeV)
 -   type: FoVBackgroundModel
     datasets_names:
-    - sSGaX3ti
+    - uHTZmlm3
     spectral:
         type: PowerLawNormSpectralModel
         parameters:
